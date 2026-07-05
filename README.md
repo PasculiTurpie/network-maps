@@ -91,3 +91,5 @@ GET /api/devices ➔ Obtiene la lista completa de nodos con sus últimas métric
 POST /api/devices ➔ Registra o actualiza (upsert) un nodo pasando deviceId, ip, location, lat, lng.
 
 DELETE /api/devices/:id ➔ Remueve un nodo de la base de datos y destruye su marcador del mapa en tiempo real.
+
+![Pantallas del sistema](https://i.ibb.co/F4yVFd9c/snmpmaps.jpg "SNMPMAPS")
