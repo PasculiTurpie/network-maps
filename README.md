@@ -1,4 +1,4 @@
-📡 NOC Monitor - Sistema de Monitoreo Geográfico SNMP en Tiempo Real
+## NOC Monitor - Sistema de Monitoreo Geográfico SNMP en Tiempo Real
 Este proyecto es un Centro de Operaciones de Red (NOC) interactivo que interroga de forma asíncrona y en paralelo a nodos remotos (Raspberry Pi / Servidores Linux) utilizando el protocolo SNMP. Los datos se centralizan en MongoDB y se empujan instantáneamente hacia un mapa táctico en React utilizando WebSockets (Socket.io).
 
 🛠️ Arquitectura del Sistema
@@ -30,23 +30,23 @@ sudo nano /etc/snmp/snmpd.conf
 Pega las siguientes directivas de red y scripts de extracción de hardware:
 
 Plaintext
-# Escuchar peticiones UDP externas en el puerto estándar 161
+## Escuchar peticiones UDP externas en el puerto estándar 161
 agentaddress udp:161
 
-# Permitir acceso de lectura a tu subred local (Ejemplo para rango 192.168.5.X)
+## Permitir acceso de lectura a tu subred local (Ejemplo para rango 192.168.5.X)
 rocommunity comunidad_monitoreo 192.168.5.0/24
 
-# Mapeo de comandos nativos del sistema para telemetría
+## Mapeo de comandos nativos del sistema para telemetría
 extend cputemp /bin/sh -c "cat /sys/class/thermal/thermal_zone0/temp | awk '{print \$1/1000}'"
 extend fanspeed /bin/sh -c "echo 2100"
 extend ramdisponible /bin/sh -c "free -m | awk '/Mem:/ {print \$7}'"
 Habilitar y reiniciar el servicio:
 
-Bash
+## Bash
 sudo systemctl enable snmpd
 sudo systemctl restart snmpd
 💻 Instalación y Despliegue del Proyecto
-1. Configuración del Backend
+## 1. Configuración del Backend
 Navega a la carpeta del servidor:
 
 Bash
@@ -61,7 +61,7 @@ Bash
 npm run dev
 (El backend interrogará a todos los equipos registrados cada 15 segundos en paralelo utilizando Promise.all).
 
-2. Configuración del Frontend
+## 2. Configuración del Frontend
 Navega a la carpeta de la interfaz:
 
 Bash
