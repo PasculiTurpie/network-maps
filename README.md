@@ -4,7 +4,7 @@ Este proyecto es un Centro de Operaciones de Red (NOC) interactivo que interroga
 🛠️ Arquitectura del Sistema
 Frontend: React, @vis.gl/react-google-maps (Advanced Markers HTML5), Socket.io-client.
 
-Backend: Node.js, Express, net-snmp (Escaneo asíncrono UDP), Socket.io.
+Backend: Node.js, Express, net-snmp (Escaneo asíncrono UDP).
 
 Base de Datos: MongoDB (Persistencia de inventario, coordenadas y estados).
 
