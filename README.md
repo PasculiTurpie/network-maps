@@ -1,8 +1,8 @@
 ## NOC Monitor - Sistema de Monitoreo Geográfico SNMP en Tiempo Real
-Este proyecto es un Centro de Operaciones de Red (NOC) interactivo que interroga de forma asíncrona y en paralelo a nodos remotos (Raspberry Pi / Servidores Linux) utilizando el protocolo SNMP. Los datos se centralizan en MongoDB y se empujan instantáneamente hacia un mapa táctico en React utilizando WebSockets (Socket.io).
+Este proyecto es un Centro de Operaciones de Red (NOC) interactivo que interroga de forma asíncrona y en paralelo a nodos remotos (Raspberry Pi / Servidores Linux) utilizando el protocolo SNMP. Los datos se centralizan en MongoDB y se empujan instantáneamente hacia un mapa táctico en React.
 
 🛠️ Arquitectura del Sistema
-Frontend: React, @vis.gl/react-google-maps (Advanced Markers HTML5), Socket.io-client.
+Frontend: React, @vis.gl/react-google-maps (Advanced Markers HTML5).
 
 Backend: Node.js, Express, net-snmp (Escaneo asíncrono UDP).
 
@@ -66,10 +66,10 @@ Navega a la carpeta de la interfaz:
 
 Bash
 cd frontend-maps
-Instala los módulos de Google Maps y WebSockets:
+Instala los módulos de Google Maps:
 
 Bash
-npm install @vis.gl/react-google-maps socket.io-client
+npm install @vis.gl/react-google-maps
 Lanza el servidor de desarrollo:
 
 Bash
